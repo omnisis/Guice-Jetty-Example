@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+
+version = 1.0
+projectName = 'simple-guice-webapp'
+sourceCompatibility = 1.6
+jettyVersion = '7.2.0v20101020'
+
+repositories {
+  mavenCentral()
+  mavenRepo url: "http://localhost:8081/nexus/content/groups/public"
+}
+
+dependencies {
+  testCompile 'junit:junit:4.8.2'
+  compile  'com.google.inject:guice:3.0'
+  compile  'javax.servlet:servlet-api:2.5'
+  compile  fileTree(dir: 'libs', includes: ['jetty-*.jar'])
+
+}
+
