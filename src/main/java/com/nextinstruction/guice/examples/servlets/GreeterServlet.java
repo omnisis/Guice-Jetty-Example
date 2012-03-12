@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class GreeterServlet extends HttpServlet {
-    //private Greeter myGreeter;
     private GreeterViewHandler viewHandler = new GreeterViewHandler();
 
     @Override
@@ -18,12 +17,11 @@ public class GreeterServlet extends HttpServlet {
             throws ServletException, IOException {
         final PrintWriter out = resp.getWriter();
         viewHandler.outputPreBody(out);
-        viewHandler.outputBody(out, "Hello from GreeterServlet!");
+        viewHandler.outputBody(out, getBody());
         viewHandler.outputPostBody(out);
     }
 
-   /* @Inject
-    public void setMyGreeter(Greeter myGreeter) {
-        this.myGreeter = myGreeter;
-    }*/
+   protected String getBody() {
+       return "Hello from GreeterServlet!";
+   }
 }

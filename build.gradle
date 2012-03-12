@@ -17,6 +17,7 @@ dependencies {
   compile  'com.google.inject:guice:3.0'
   compile  'javax.servlet:servlet-api:2.5'
   compile  fileTree(dir: 'libs', includes: ['jetty-*.jar'])
+  compile  files('libs/guice-servlet-3.0.jar')
 
 }
 

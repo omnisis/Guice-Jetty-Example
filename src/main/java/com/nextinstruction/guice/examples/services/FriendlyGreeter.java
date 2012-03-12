@@ -1,6 +1,6 @@
 package com.nextinstruction.guice.examples.services;
 
-class FriendlyGreeter implements Greeter {
+public class FriendlyGreeter implements Greeter {
 
     @Override
     public String greet() {
