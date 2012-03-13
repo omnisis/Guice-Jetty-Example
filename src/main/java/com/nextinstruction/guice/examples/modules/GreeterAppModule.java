@@ -7,7 +7,6 @@
 package com.nextinstruction.guice.examples.modules;
 
 import com.google.inject.AbstractModule;
-import com.google.inject.Binder;
 import com.google.inject.Scopes;
 import com.nextinstruction.guice.examples.services.FriendlyGreeter;
 import com.nextinstruction.guice.examples.services.Greeter;
